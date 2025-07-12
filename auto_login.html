@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Auto Login</title></head>
+<body>
+<script>
+// Open the main site and auto-login
+window.open('http://localhost:8000/luxe_dating_platform.html', '_blank');
+setTimeout(() => {
+    console.log('Attempting auto-login...');
+    if (typeof window.devLogin === 'function') {
+        window.devLogin('daddy');
+    }
+}, 2000);
+</script>
+<p>Auto-login script loaded. Check the main window.</p>
+</body>
+</html>
