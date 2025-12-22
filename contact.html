@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="צור קשר עם נ.י. טנק ישראל - נשמח לעמוד לשירותכם">
+    <title>צור קשר - נ.י. טנק ישראל</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">דלג לתוכן הראשי</a>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span>נ.י. טנק ישראל</span>
+                </a>
+                
+                <button class="menu-toggle" aria-label="תפריט ניווט" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">דף בית</a></li>
+                    <li><a href="about.html" class="nav-link">אודות</a></li>
+                    <li><a href="services.html" class="nav-link">שירותים</a></li>
+                    <li><a href="contact.html" class="nav-link active">צור קשר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="hero" style="min-height: 300px;">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>צור קשר</h1>
+                    <p>נשמח לעמוד לשירותכם ולענות על כל שאלה</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form & Info -->
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-2" style="gap: 3rem;">
+                    <!-- Contact Form -->
+                    <div>
+                        <div class="card">
+                            <h2 style="margin-bottom: 1.5rem;">שלחו לנו הודעה</h2>
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">שם מלא *</label>
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="שם פרטי ושם משפחה" required>
+                                    <div class="form-error">שדה זה הוא חובה</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="form-label">כתובת אימייל *</label>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="example@email.com" required>
+                                    <div class="form-error">אנא הזן כתובת אימייל תקינה</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">מספר טלפון *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="050-1234567" required>
+                                    <div class="form-error">אנא הזן מספר טלפון תקין</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="company" class="form-label">שם חברה/עסק</label>
+                                    <input type="text" id="company" name="company" class="form-control" placeholder="שם העסק שלך (אופציונלי)">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="service" class="form-label">שירות מבוקש</label>
+                                    <select id="service" name="service" class="form-control">
+                                        <option value="">בחר שירות</option>
+                                        <option value="dishwashers">מדיחי כלים להשכרה</option>
+                                        <option value="oil-separators">מפרידי שומן</option>
+                                        <option value="water-softeners">מרככי מים</option>
+                                        <option value="cleaning-machines">מכונות רחצה וניקיון</option>
+                                        <option value="maintenance">שירות ותחזוקה</option>
+                                        <option value="other">אחר</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message" class="form-label">הודעה *</label>
+                                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="ספר לנו במה אנחנו יכולים לעזור..." required></textarea>
+                                    <div class="form-error">אנא כתוב הודעה</div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">שלח הודעה</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div>
+                        <div class="card" style="background: linear-gradient(135deg, #003d7a 0%, #005eb8 100%); color: white;">
+                            <h2 style="color: white; margin-bottom: 2rem;">פרטי התקשרות</h2>
+                            
+                            <div style="margin-bottom: 2rem;">
+                                <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem;">
+                                    <div style="font-size: 2rem;">📞</div>
+                                    <div>
+                                        <h3 style="color: white; font-size: 1.1rem; margin-bottom: 0.5rem;">טלפון</h3>
+                                        <p style="margin: 0; opacity: 0.95;">03-1234567</p>
+                                        <p style="margin: 0; opacity: 0.95;">054-9876543 (נייד)</p>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem;">
+                                    <div style="font-size: 2rem;">📧</div>
+                                    <div>
+                                        <h3 style="color: white; font-size: 1.1rem; margin-bottom: 0.5rem;">אימייל</h3>
+                                        <p style="margin: 0; opacity: 0.95;">info@nitank.co.il</p>
+                                        <p style="margin: 0; opacity: 0.95;">support@nitank.co.il</p>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem;">
+                                    <div style="font-size: 2rem;">📍</div>
+                                    <div>
+                                        <h3 style="color: white; font-size: 1.1rem; margin-bottom: 0.5rem;">כתובת</h3>
+                                        <p style="margin: 0; opacity: 0.95;">רחוב הדוגמה 123</p>
+                                        <p style="margin: 0; opacity: 0.95;">תל אביב, ישראל 6812345</p>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem;">
+                                    <div style="font-size: 2rem;">🕐</div>
+                                    <div>
+                                        <h3 style="color: white; font-size: 1.1rem; margin-bottom: 0.5rem;">שעות פעילות</h3>
+                                        <p style="margin: 0; opacity: 0.95;">ימים א'-ה': 08:00-17:00</p>
+                                        <p style="margin: 0; opacity: 0.95;">יום ו': 08:00-13:00</p>
+                                        <p style="margin: 0; opacity: 0.95;">שבת: סגור</p>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                                    <div style="font-size: 2rem;">⚡</div>
+                                    <div>
+                                        <h3 style="color: white; font-size: 1.1rem; margin-bottom: 0.5rem;">שירות חירום</h3>
+                                        <p style="margin: 0; opacity: 0.95;">זמינים 24/7 למקרי חירום</p>
+                                        <p style="margin: 0; opacity: 0.95;">חייגו: 052-1112233</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 2rem; margin-top: 2rem;">
+                                <h3 style="color: white; margin-bottom: 1rem;">עקבו אחרינו</h3>
+                                <div class="social-links">
+                                    <a href="#" class="social-link" aria-label="פייסבוק">📘</a>
+                                    <a href="#" class="social-link" aria-label="אינסטגרם">📷</a>
+                                    <a href="#" class="social-link" aria-label="לינקדאין">💼</a>
+                                    <a href="#" class="social-link" aria-label="ווטסאפ">💬</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="text-center mb-4">מיקום המשרדים</h2>
+                <div style="background: #ddd; height: 400px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #666; font-size: 1.2rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">🗺️</div>
+                        <p>כאן יופיע מפת Google Maps</p>
+                        <p style="font-size: 0.9rem;">רחוב הדוגמה 123, תל אביב</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="text-center mb-4">שאלות נפוצות</h2>
+                
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <h3 style="color: #003d7a; margin-bottom: 1rem;">כמה זמן לוקח לקבל מענה לפנייה?</h3>
+                        <p>אנו משיבים לכל הפניות תוך 24 שעות בימי עבודה. במקרי חירום, אנו זמינים 24/7.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <h3 style="color: #003d7a; margin-bottom: 1rem;">האם ישנה עלות לייעוץ ראשוני?</h3>
+                        <p>לא, הייעוץ הראשוני והערכת הצרכים שלכם הם ללא עלות והתחייבות.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <h3 style="color: #003d7a; margin-bottom: 1rem;">באילו אזורים אתם מספקים שירות?</h3>
+                        <p>אנו מספקים שירות בכל רחבי הארץ - מצפון ועד דרום, כולל אזורי הפריפריה.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <h3 style="color: #003d7a; margin-bottom: 1rem;">כמה זמן לוקח התקנת ציוד חדש?</h3>
+                        <p>זמן ההתקנה תלוי בסוג הציוד ובמורכבות העבודה. בממוצע, התקנה סטנדרטית נמשכת בין יום ליומיים.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: #003d7a; margin-bottom: 1rem;">מה כולל שירות התחזוקה?</h3>
+                        <p>שירות התחזוקה שלנו כולל ביקורים תקופתיים, בדיקות תקינות, החלפת חלקים בלאי וזמינות לתקלות חירום.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section" style="background: linear-gradient(135deg, #003d7a 0%, #005eb8 100%); color: white;">
+            <div class="container text-center">
+                <h2 style="color: white; margin-bottom: 1rem;">יש לכם שאלות נוספות?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.95;">צרו איתנו קשר עכשיו - נשמח לעזור!</p>
+                <a href="tel:03-1234567" class="btn btn-outline" style="font-size: 1.1rem; padding: 15px 40px;">התקשרו: 03-1234567</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>נ.י. טנק ישראל</h3>
+                    <p>מובילים בתחום ציוד ניקיון למטבחים תעשייתיים בישראל. איכות, אמינות ושירות מעולה.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="פייסבוק">📘</a>
+                        <a href="#" class="social-link" aria-label="אינסטגרם">📷</a>
+                        <a href="#" class="social-link" aria-label="לינקדאין">💼</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>קישורים מהירים</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">דף בית</a></li>
+                        <li><a href="about.html">אודות</a></li>
+                        <li><a href="services.html">שירותים</a></li>
+                        <li><a href="contact.html">צור קשר</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>צור קשר</h3>
+                    <p>📞 טלפון: 03-1234567</p>
+                    <p>📧 אימייל: info@nitank.co.il</p>
+                    <p>📍 כתובת: רחוב הדוגמה 123, תל אביב</p>
+                    <p>🕐 שעות פעילות: א'-ה' 08:00-17:00</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>הירשמו לניוזלטר</h3>
+                    <p>קבלו עדכונים ומבצעים מיוחדים</p>
+                    <form id="newsletterForm" style="margin-top: 1rem;">
+                        <input type="email" class="form-control" placeholder="אימייל שלך" required style="margin-bottom: 0.5rem;">
+                        <button type="submit" class="btn btn-success" style="width: 100%;">הרשמה</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 נ.י. טנק ישראל. כל הזכויות שמורות.</p>
+                <p><a href="#" style="color: rgba(255, 255, 255, 0.6);">הצהרת נגישות</a> | <a href="#" style="color: rgba(255, 255, 255, 0.6);">מדיניות פרטיות</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
