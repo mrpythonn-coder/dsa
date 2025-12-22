@@ -1,5 +1,9 @@
 // Nitank Website Clone - Interactive JavaScript
 
+// ========== Configuration ==========
+// To change WhatsApp number: Edit the number in the sendToWhatsApp function (line ~190)
+// Format: Country code + number (e.g., 972501234567 for Israel)
+
 // ========== Mobile Menu Toggle ==========
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
@@ -157,9 +161,18 @@ if (contactForm) {
         }
         
         if (isValid) {
-            // Show success message
-            showSuccessMessage();
-            this.reset();
+            // Get form data
+            const formData = {
+                name: name.value.trim(),
+                email: email.value.trim(),
+                phone: phone.value.trim(),
+                company: this.querySelector('#company')?.value.trim() || 'לא צוין',
+                service: this.querySelector('#service')?.value || 'לא צוין',
+                message: message.value.trim()
+            };
+            
+            // Send to WhatsApp
+            sendToWhatsApp(formData);
         }
     });
 }
@@ -173,14 +186,55 @@ function showError(input, message) {
     }
 }
 
+// ========== Send Form to WhatsApp ==========
+function sendToWhatsApp(formData) {
+    // WhatsApp phone number (replace with actual number)
+    // Format: country code + phone number (no + or spaces)
+    const whatsappNumber = '972501234567'; // Replace with your actual WhatsApp number
+    
+    // Create WhatsApp message
+    const message = `
+🔔 *פנייה חדשה מאתר נ.י. טנק*
+
+👤 *שם:* ${formData.name}
+📧 *אימייל:* ${formData.email}
+📞 *טלפון:* ${formData.phone}
+🏢 *חברה:* ${formData.company}
+🛠️ *שירות מבוקש:* ${formData.service}
+
+💬 *הודעה:*
+${formData.message}
+    `.trim();
+    
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    // Show success message first
+    showSuccessMessage();
+    
+    // Open WhatsApp after a short delay
+    setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+    }, 500);
+    
+    // Reset form after sending
+    const contactForm = document.querySelector('#contactForm');
+    if (contactForm) {
+        contactForm.reset();
+    }
+}
+
 function showSuccessMessage() {
     // Create success notification
     const notification = document.createElement('div');
     notification.className = 'notification success';
     notification.innerHTML = `
         <div class="notification-content">
-            <strong>הודעה נשלחה בהצלחה!</strong>
-            <p>נחזור אליך בהקדם האפשרי</p>
+            <strong>פותח WhatsApp...</strong>
+            <p>הפרטים שלך מועברים ישירות אלינו</p>
         </div>
     `;
     
